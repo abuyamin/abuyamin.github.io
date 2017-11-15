@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <title>Media Player!</title>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+
+  <link rel="stylesheet" type="text/css" href="css/style2.css">
+  <link href="https://fonts.googleapis.com/css?family=Yanone+Kaffeesatz:200,300,400" rel="stylesheet">
+  <script src="js/id3-minimized.js"></script>
+</head>
+
+<body>
+  <header>
+    <nav id="header-nav" class="navbar navbar-dark navbar-expand-md bg-dark">
+      <div class="container-fluid">
+        <!-- <a class="navbar-brand" href="#">Hashim K.</a> -->
+        <a class="navbar-brand navbar-brand-logo" href="#">
+          <span class="brand">Home</span>
+        </a>
+        <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#collapsable-nav" aria-controls="collapsableControl" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div id="collapsable-nav" class="collapse navbar-collapse">
+          <ul id="nav-list" class="ml-auto navbar-nav nav">
+            <li class="nav-item" id="link-about">
+              <a class="nav-link" href="#about">About</a>
+            </li>
+            <li class="nav-item" id="link-contact">
+              <a class="nav-link" href="#contact">Contact</a>
+            </li>
+          </ul>
+        </div><!-- #collapsable-nav -->
+      </div><!-- .container -->
+    </nav>
+  </header>
+
+  <section id="file-input">
+    <div class="container">
+      <div class="row">
+        <div class="col-12" id="file-in">
+          <h2>Load playlist</h2>
+          <input class="text-right" type="file" id="files" name="files[]" multiple />
+          <output id="list"></output>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="media-player">
+    <div class="container">
+      <div class="row">
+        <div class="col-12 mainwrap">
+
+          <div id="nowPlay">
+            <span class="float-left" id="npAction">Paused...</span>
+            <span class="float-right" id="npTitle"></span>
+          </div>
+          
+          <div id="audiowrap">
+            <div id="audio0">
+              <audio preload id="audio1" controls="controls">Your browser does not support HTML5 Audio!</audio>
+            </div>
+            <div id="tracks">
+              <!-- &laquo; -->
+              <a id="btnPrev">≪</a>
+              <a id="shuffle-link">
+                <!-- <input type="checkbox" data-role="flipswitch" name="switch" id="shuffle"> -->
+                <input type="checkbox" checked data-toggle="toggle" data-size="mini" id="shuffle">
+
+                <!-- <span>Shuffle</span> -->
+              </a>
+              <a id="btnNext">≫</a>
+            </div>
+          </div>
+          <hr align="center" width="100%">
+          <div id="plwrap">
+            <!-- <ul id="plList"></ul> -->
+            <table id="plList"></table>
+          </div>
+
+        </div>
+      </div>
+    </div>    
+  </section>
+
+  <!-- Optional JavaScript -->
+  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
+
+  <script src="js/script.js"></script>
+
+</body>
+</html>

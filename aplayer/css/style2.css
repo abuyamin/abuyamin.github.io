@@ -1,0 +1,104 @@
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    /*border: 1px solid green;*/
+}
+body {
+	height: 100%
+	max-height: 100%;
+	color:#5a5a5a; 
+	background-color: #62666b;
+	font:20px/24px "Yanone Kaffeesatz", HelveticaNeue, "Helvetica Neue", Helvetica, Arial, sans-serif;
+
+}
+
+section {
+	margin-top: 2em;
+	/*border: 1px solid blue;*/
+}
+
+h2 {
+    text-transform: capitalize;
+    text-align: center;
+}
+th, td {
+    text-align: center;
+    vertical-align: middle;
+}
+#file-in {
+	/*background-color: #fafafa;*/
+	background-color: #62666b;
+	color: #fafafa;
+	padding: 10px 5px;
+	box-shadow: 5px -5px 10px #222;
+}
+.mainwrap > div {
+	clear: both;
+	background-color: #fafafa; 
+}
+.mainwrap {
+	padding: 15px 10px;
+	border-radius: 10px;
+	background-color: #fafafa; 
+	box-shadow: 5px -5px 3px #222;
+	> hr{
+		margin: 0;
+	}
+}
+#audiowrap { 
+	background-color:#fafafa; 
+}
+audio {
+	width: 100%;
+}
+#nowPlay {
+	padding: 0 15px;
+}
+#audiowrap > div { position:relative; text-align:center; }
+a[id^="btn"] { background-color:#231F20; color:#C8C7C8; cursor:pointer; display:inline-block; font-size:1em; margin:0; padding:1px 25px; text-decoration:none; }
+a[id^="btn"]:last-child { margin-left:-4px; }
+a[id^="btn"] { 
+	background-color:#fafafa; color:#5a5a5a; 
+}
+a[id^="btn"]:hover { 
+	background-color:#eee; 
+}
+#plList {
+  	list-style-type: none;
+  	padding-left: 0;
+  	width: 100%;
+/*    height: 300px;
+  	overflow-y: scroll;*/
+}
+#plList tr { 
+	background-color:#e2e2f9; 
+	cursor:pointer; 
+	display:block; 
+	margin:0; 
+	padding:10px 0; }
+#plwrap {
+	height: 300px;
+    overflow: auto;
+}
+#plList tr:hover { 
+	background-color:#eee; 
+}
+.plItem { position:relative; }
+.plTitle { left:50px; overflow:hidden; position:absolute; right:65px; text-overflow:ellipsis; top:0; white-space:nowrap; }
+.plNum { padding-left:21px; width:25px; }
+.plLength { padding-left:21px; position:absolute; right:21px; top:0; }
+.plSel,
+.plSel:hover { 
+	background-color:#eee!important; 
+}
+
+button {
+	margin: 0 5px;
+}
+
+
+
+@media screen and (min-width: 768px) {
+	.container { width:500px; }
+}
