@@ -164,7 +164,7 @@ $(document).ready(function(){
       }
     }),
     li = $('#plList tr').click(function () {
-      var id = parseInt($(this).AP.index());
+      var id = parseInt($(this).index());
       if (id !== AP.index) {
         playTrack(id, true);
       }
