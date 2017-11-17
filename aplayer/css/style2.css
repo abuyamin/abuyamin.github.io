@@ -56,10 +56,53 @@ audio {
 	padding: 0 15px;
 }
 #audiowrap > div { position:relative; text-align:center; }
-a[id^="btn"] { background-color:#231F20; color:#C8C7C8; cursor:pointer; display:inline-block; font-size:1em; margin:0; padding:1px 25px; text-decoration:none; }
-a[id^="btn"]:last-child { margin-left:-4px; }
+/* buttoon icons*/
+#btnShuffle:after {
+	content: '\f074';
+}
+#btnPrev:after {
+	content: '\f048';
+}
+#btnNext:after {
+	content: '\f051';
+}
+#btnRepeat:after {
+	content: '\f01e';
+}
+.control-button {
+    background-color: transparent;
+    border: none;
+    color: #5a5a5a;
+    cursor: pointer;
+    width: 32px;
+    min-width: 32px;
+    height: 32px;
+    position: relative;
+    transition: all 33ms cubic-bezier(.3,0,.7,1)
+}
+
+.control-button:hover,
+.control-button--active {
+    color: #4285f4;
+}
+.control-button--active:hover {
+    color: #5a5a5a
+}
+
+
 a[id^="btn"] { 
-	background-color:#fafafa; color:#5a5a5a; 
+	background-color:#231F20; 
+	color:#C8C7C8; 
+	cursor:pointer; 
+	display:inline-block; 
+	font-size:1em; margin:0; 
+	padding:1px 25px; 
+	text-decoration:none; }
+a[id^="btn"]:last-child { 
+	margin-left:-4px; }
+a[id^="btn"] { 
+	background-color:#fafafa; 
+	color:#5a5a5a; 
 }
 a[id^="btn"]:hover { 
 	background-color:#eee; 

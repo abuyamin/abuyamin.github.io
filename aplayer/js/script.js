@@ -1,4 +1,5 @@
 $(document).ready(function(){
+  var AP = new Object();
   // Check for the various File API support.
   if (window.File && window.FileReader && window.FileList && window.Blob) {
     // Great success! All the File APIs are supported.
@@ -92,8 +93,7 @@ $(document).ready(function(){
       elm.removeChild(elm.lastChild);
     }
 
-    var index = 0, 
-    playActive = false,
+    var playActive = false,
     buildPlaylist = $.each(tracks, function(key, value) {
       var trackNumber = value.track,
       trackName = value.name,
@@ -112,10 +112,11 @@ $(document).ready(function(){
     trackCount = tracks.length,
     npAction = $('#npAction'),
     npTitle = $('#npTitle');
-    window.shuffleIndex = Array.range(0, trackCount);
-    // check if shuffle is on and shuffle index 
-    if ($('#shuffle').is(":checked")){
-      shuffle(shuffleIndex);
+    AP.shuffleIndex = Array.range(0, trackCount);
+    AP.index = 0;
+    // check if shuffle is on
+    if ( $('#btnShuffle').hasClass('control-button--active') ){
+      shuffle(AP.shuffleIndex);
     }
 
     var audio = $('#audio1').bind('play', function () {
@@ -126,53 +127,54 @@ $(document).ready(function(){
       npAction.text('Paused...');
     }).bind('ended', function () {
       npAction.text('Paused...');
-      if ((index + 1) < trackCount) {
-        index++;
-        loadTrack(index);
+      if ((AP.index + 1) < trackCount) {
+        AP.index++;
+        loadTrack(AP.index);
         audio.play();
       } else {
         audio.pause();
-        index = 0;
-        loadTrack(index);
+        AP.index = 0;
+        loadTrack(AP.index);
       }
     }).get(0),
     btnPrev = $('#btnPrev').click(function () {
-      if ((index - 1) > -1) {
-        index--;
-        loadTrack(index);
+      if ((AP.index - 1) > -1) {
+        AP.index--;
+        loadTrack(AP.index);
         if (playActive) {
           audio.play();
         }
       } else {
         audio.pause();
-        index = 0;
-        loadTrack(index);
+        AP.index = 0;
+        loadTrack(AP.index);
       }
     }),
     btnNext = $('#btnNext').click(function () {
-      if ((index + 1) < trackCount) {
-        index++;
-        loadTrack(index);
+      if ((AP.index + 1) < trackCount) {
+        AP.index++;
+        loadTrack(AP.index);
         if (playActive) {
           audio.play();
         }
       } else {
         audio.pause();
-        index = 0;
-        loadTrack(index);
+        AP.index = 0;
+        loadTrack(AP.index);
       }
     }),
     li = $('#plList tr').click(function () {
-      var id = parseInt($(this).index());
-      if (id !== index) {
+      var id = parseInt($(this).AP.index());
+      if (id !== AP.index) {
         playTrack(id, true);
       }
     }),
+
     loadTrack = function (id, direct) {
       if(direct===undefined){ direct = false;}
-      // translte id into effective id using shuffleIndex
+      // translte id into effective id using AP.shuffleIndex
       if(!direct){
-        id = shuffleIndex[id % shuffleIndex.length];
+        id = AP.shuffleIndex[id % AP.shuffleIndex.length];
       }
       $('.plSel').removeClass('plSel');
       $('#plList tr:eq(' + id + ')').addClass('plSel');
@@ -181,26 +183,38 @@ $(document).ready(function(){
       document.getElementById('plwrap').scrollTop = topPos - 46*5;;
 
       npTitle.text(tracks[id].track +' >> '+ tracks[id].name);
-      index = id;
+      AP.index = id;
       audio.src = tracks[id].file;
       
     },
+
     playTrack = function (id, direct) {
       loadTrack(id, direct);
       audio.play();
-      var a = $('#audio1')[0];
-      console.log("Track duration \t "+ millToMinutes(a.duration*1000));
+      audio.onloadedmetadata = function() {
+        $('#plList tr:eq(' + AP.index + ') td:eq(2)').html(millToMinutes(audio.duration*1000));
+        console.log('current id : '+ id + ' index : '+ AP.index);
+      };
+      // var a = $('#audio1')[0];
+      // console.log("Track duration \t "+ millToMinutes(a.duration*1000));
     };
-    playTrack(index);
+    playTrack(AP.index);
   }
   // listen to any update on the shuffling 
-  $('#shuffle').click(function() {
-    if ($(this).is(':checked')) {
-      shuffle(shuffleIndex);
+  $('#btnShuffle').click(function() {
+    // change shuffle status 
+    $('#btnShuffle').toggleClass('control-button--active');
+    if ( $('#btnShuffle').hasClass('control-button--active') ){
+      shuffle(AP.shuffleIndex);
     } else {
-      shuffleIndex.sort(sortNumber);
+      AP.shuffleIndex.sort(sortNumber);
     }
   });  
+  $('#btnRepeat').click(function(){
+    $('#btnRepeat').toggleClass('control-button--active');
+  });
 
-  document.getElementById('files').addEventListener('change', HandleFileSelect, false);
+
+  $('#files').change(HandleFileSelect);
+  // document.getElementById('files').addEventListener('change', HandleFileSelect, false);
 });
