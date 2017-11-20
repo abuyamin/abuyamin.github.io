@@ -56,19 +56,8 @@ audio {
 	padding: 0 15px;
 }
 #audiowrap > div { position:relative; text-align:center; }
-/* buttoon icons*/
-#btnShuffle:after {
-	content: '\f074';
-}
-#btnPrev:after {
-	content: '\f048';
-}
-#btnNext:after {
-	content: '\f051';
-}
-#btnRepeat:after {
-	content: '\f01e';
-}
+
+/* media control button setting*/
 .control-button {
     background-color: transparent;
     border: none;
