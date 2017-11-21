@@ -1,0 +1,6 @@
+
+.icon-loop:before { content: '\e800'; } /* '' */
+.icon-shuffle-1:before { content: '\e801'; } /* '' */
+.icon-list:before { content: '\e802'; } /* '' */
+.icon-fast-forward:before { content: '\f012'; } /* '' */
+.icon-fast-backward:before { content: '\f013'; } /* '' */
