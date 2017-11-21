@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <title>Media Player!</title>
+  <title>APlayer</title>
   <!-- Required meta tags -->
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -19,7 +19,7 @@
       <div class="container-fluid">
         <!-- <a class="navbar-brand" href="#">Hashim K.</a> -->
         <a class="navbar-brand navbar-brand-logo" href="#">
-          <span class="brand">Home</span>
+          <span class="brand">APlayer</span>
         </a>
         <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#collapsable-nav" aria-controls="collapsableControl" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
@@ -66,7 +66,7 @@
               <audio preload id="audio1" controls="controls">Your browser does not support HTML5 Audio!</audio>
             </div>
             <div id="tracks">
-              <button class="control-button" id="btnShuffle">
+              <button class="control-button control-button--active" id="btnShuffle">
                 <i class="fa fa-random" title="Toggle shuffle"></i>
               <button class="control-button" id="btnPrev">
                 <i class="fa fa-step-backward" title="Previous"></i>
@@ -77,6 +77,9 @@
               </button>
               <button class="control-button" id="btnRepeat" >
                 <i class="fa fa-repeat" title="Toggle repeat"></i>
+              </button>
+              <button class="control-button" id="btnPlaylist" >
+                <i class="fa fa-list" title="Toggle playlist"></i>
               </button>
             </div>
           </div>

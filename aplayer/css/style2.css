@@ -9,13 +9,15 @@ body {
 	max-height: 100%;
 	color:#5a5a5a; 
 	background-color: #62666b;
-	font:20px/24px "Yanone Kaffeesatz", HelveticaNeue, "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
 
+header,
+#file-input {
+	font:20px/24px "Yanone Kaffeesatz", HelveticaNeue, "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
 section {
 	margin-top: 2em;
-	/*border: 1px solid blue;*/
 }
 
 h2 {
@@ -35,7 +37,8 @@ th, td {
 }
 .mainwrap > div {
 	clear: both;
-	background-color: #fafafa; 
+	/*background-color: #fafafa;*/
+	/*background-color: #62666b;*/
 }
 .mainwrap {
 	padding: 15px 10px;
@@ -48,6 +51,7 @@ th, td {
 }
 #audiowrap { 
 	background-color:#fafafa; 
+	/*background-color: #62666b;*/
 }
 audio {
 	width: 100%;
@@ -75,54 +79,57 @@ audio {
     color: #4285f4;
 }
 .control-button--active:hover {
-    color: #5a5a5a
-}
-
-
-a[id^="btn"] { 
-	background-color:#231F20; 
-	color:#C8C7C8; 
-	cursor:pointer; 
-	display:inline-block; 
-	font-size:1em; margin:0; 
-	padding:1px 25px; 
-	text-decoration:none; }
-a[id^="btn"]:last-child { 
-	margin-left:-4px; }
-a[id^="btn"] { 
-	background-color:#fafafa; 
-	color:#5a5a5a; 
-}
-a[id^="btn"]:hover { 
-	background-color:#eee; 
+    color: #5a5a5a;
 }
 #plList {
   	list-style-type: none;
   	padding-left: 0;
   	width: 100%;
-/*    height: 300px;
-  	overflow-y: scroll;*/
+  	background-color: #f5f5f5;
+  	color: #222;
 }
 #plList tr { 
-	background-color:#e2e2f9; 
 	cursor:pointer; 
 	display:block; 
 	margin:0; 
 	padding:10px 0; }
+
+#plList tr:nth-child(odd){
+	background-color: #eee;
+}
 #plwrap {
 	height: 300px;
     overflow: auto;
 }
 #plList tr:hover { 
-	background-color:#eee; 
+	background-color:#b7d0fb; 
 }
 .plItem { position:relative; }
-.plTitle { left:50px; overflow:hidden; position:absolute; right:65px; text-overflow:ellipsis; top:0; white-space:nowrap; }
-.plNum { padding-left:21px; width:25px; }
-.plLength { padding-left:21px; position:absolute; right:21px; top:0; }
-.plSel,
-.plSel:hover { 
-	background-color:#eee!important; 
+.plTitle {
+	left: 4em;
+    overflow: hidden;
+    position: absolute;
+    right: 65px;
+    text-overflow: ellipsis;
+    top: 10px;
+    white-space: nowrap;
+}
+.plNum {
+	padding-left: 0.5em;
+    width: 3em;
+    text-align: right;
+}
+.plLength { 
+	padding-left:0.5em; 
+	position:absolute; 
+	right:21px; 
+	top:10px; 
+}
+.plSel { 
+	background-color:#a0a0a4!important; 
+}
+.plSel:hover {
+	background-color: #C0C4CD !important;
 }
 
 button {
