@@ -2,7 +2,6 @@
   <a href="/aplayer/index.html">XSPF-Player</a>
 </h1>
 
-----
 
 ## Welcome to GitHub Pages
 
