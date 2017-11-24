@@ -111,8 +111,6 @@ $(document).ready(function(){
       // $('#plList').append('<li><div class="plItem"><div class="plNum">' + trackNumber + '.</div><div class="plTitle">' + trackName + '</div><div class="plLength">' + trackLength + '</div></div></li>');
     });
     AP.playActive = false;
-    AP.shuffleOn = false;
-    AP.repeatOn = false;
     AP.index = 0;
     AP.trackCount = tracks.length;
     AP.shuffleIndex = Array.range(0, AP.trackCount);
@@ -131,7 +129,6 @@ $(document).ready(function(){
     // check if shuffle is on
     if (AP.shuffleOn()){
       shuffle(AP.shuffleIndex);
-      AP.shuffleOn = true;
     }
     if (AP.playlistOn()) {
       $("#plwrap").show();
@@ -215,7 +212,7 @@ $(document).ready(function(){
     // change shuffle status 
     $('#btnShuffle').toggleClass('control-button--active');
     if(typeof AP.shuffleIndex != 'undefined'){
-      if (AP.repeatOn() ){
+      if (AP.shuffleOn() ){
         AP.index = 0;
         shuffle(AP.shuffleIndex);
       } else {
