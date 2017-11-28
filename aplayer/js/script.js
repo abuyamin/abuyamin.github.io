@@ -1,3 +1,12 @@
+$(function () {
+  $("#navbar-btn").blur(function (event) {
+    var screenWidth = window.innerWidth;
+    if (screenWidth < 768) {
+      $("#collapsable-nav").collapse('hide');
+    }
+  });
+});
+
 $(document).ready(function(){
   window.AP = new Object();
   // Check for the various File API support.
@@ -232,5 +241,53 @@ $(document).ready(function(){
 
 
   $('#files').change(HandleFileSelect);
-  // document.getElementById('files').addEventListener('change', HandleFileSelect, false);
+
+  // keybord shortcut 
+  function updateAP(e) {
+    var a = $('audio')[0]; // media player 
+    switch(e.keyCode) {
+      case 38:
+        a.volume = Math.min(a.volume+0.1, 1); // volume up
+        break;
+      case 40:
+        a.volume = Math.max(a.volume-0.1, 0); // volume down
+        break;
+      case 39:
+        a.currentTime = Math.min(a.currentTime+10, a.duration); //10sec forward
+        break;
+      case 37:
+        a.currentTime = Math.max(a.currentTime-10, 0); //10sec backward
+        break;
+      case 32:
+        if (typeof AP.playActive != 'undefined') {
+          if (AP.playActive) { // #todo check if element exists
+            a.pause(); // stop media
+          } else {
+            a.play();
+          }
+        }
+        break;
+      case 78:
+        $("#btnNext").click().blur();
+        break;
+      case 80:
+        $("#btnPrev").click().blur();
+        break;
+      case 82:
+        $("#btnRepeat").click().blur();// repeat
+        break;
+      case 76:
+        $("#btnPlaylist").click().blur();// list toggle (playlist)
+        break;
+      case 83:
+        $("#btnShuffle").click().blur();// shuffle
+        break;
+      // case 68:
+      //  //download
+      //  break;
+      //  // console.log(e.keyCode);
+    }
+  }
+
+  $(document).keydown(updateAP);
 });
