@@ -289,5 +289,5 @@ $(document).ready(function(){
     }
   }
 
-  $(document).keydown(updateAP);
+  $(document).on('keydown', updateAP);
 });
