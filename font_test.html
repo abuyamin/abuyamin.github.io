@@ -1,0 +1,986 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+
+    <link href="https://fonts.googleapis.com/css?family=Atma|Boogaloo|Bubblegum+Sans|Butterfly+Kids|Cabin|Cabin+Sketch|Capriola|Chewy|Coming+Soon|Delius+Swash+Caps|Flavors|Fresca|Henny+Penny|Londrina+Outline|Londrina+Shadow|Londrina+Sketch|Londrina+Solid|Love+Ya+Like+A+Sister|Luckiest+Guy|McLaren|Modak|Mouse+Memoirs|Mystery+Quest|Pompiere|Snippet&display=swap" rel="stylesheet">
+    <style>
+        .Capriola{
+            font-family: 'Capriola', sans-serif;
+        }
+
+        .Atma{
+            font-family: 'Atma', cursive;
+        }
+
+        .Snippet{
+            font-family: 'Snippet', sans-serif;
+        }
+
+        .Modak{
+            font-family: 'Modak', cursive;
+        }
+
+        .Flavors{
+            font-family: 'Flavors', cursive;
+        }
+
+        .Londrina_Solid{
+            font-family: 'Londrina Solid', cursive;
+        }
+
+        .Londrina_Sketch{
+            font-family: 'Londrina Sketch', cursive;
+        }
+
+        .Londrina_Outline{
+            font-family: 'Londrina Outline', cursive;
+        }
+
+        .Londrina_Shadow{
+            font-family: 'Londrina Shadow', cursive;
+        }
+
+        .McLaren{
+            font-family: 'McLaren', cursive;
+        }
+
+        .Henny_Penny{
+            font-family: 'Henny Penny', cursive;
+        }
+
+        .Fresca{
+            font-family: 'Fresca', sans-serif;
+        }
+
+        .Mouse_Memoirs{
+            font-family: 'Mouse Memoirs', sans-serif;
+        }
+
+        .Butterfly_Kids{
+            font-family: 'Butterfly Kids', cursive;
+        }
+
+        .Cabin_Sketch{
+            font-family: 'Cabin Sketch', cursive;
+        }
+
+        .Cabin{
+            font-family: 'Cabin', sans-serif;
+        }
+
+        .Mystery_Quest{
+            font-family: 'Mystery Quest', cursive;
+        }
+
+        .Pompiere{
+            font-family: 'Pompiere', cursive;
+        }
+
+        .Chewy{
+            font-family: 'Chewy', cursive;
+        }
+
+        .Love_Ya_Like_A_Sister{
+            font-family: 'Love Ya Like A Sister', cursive;
+        }
+
+        .Coming_Soon{
+            font-family: 'Coming Soon', cursive;
+        }
+
+        .Luckiest_Guy{
+            font-family: 'Luckiest Guy', cursive;
+        }
+
+        .Boogaloo{
+            font-family: 'Boogaloo', cursive;
+        }
+
+        .Delius_Swash_Caps{
+            font-family: 'Delius Swash Caps', cursive;
+        }
+
+        .Bubblegum_Sans{
+            font-family: 'Bubblegum Sans', cursive;
+        }
+        td{
+            
+            font-size: 2.8rem;
+            margin: 0px;
+            padding: 10px;
+            border-radius: 0px;
+            background-color: var(--purple);
+            text-align: center;
+            color: var(--orange);
+        }
+        td input{
+            width: 3em;
+            height: 3em;
+            padding: 0px;
+            margin: 0px;
+            border-radius: 1.15rem !important;
+        }
+        body {
+            background: var(--yellow);
+            font-size: 22px;
+        }
+
+        div.container div{
+            background: var(--orange);
+            border-radius: 50px;
+            padding: 20px;
+            margin: 15px;
+        }
+        .container div:nth-child(even) {
+            text-align: right;
+        }
+        td{
+            border: 5px solid var(--orange);
+        }
+
+    </style>
+</head>
+
+<body>
+    <div class="container text-light">
+        <div class="Capriola">
+            <h1>Compute the sum - Capriola</h1>
+            <h2>Find the missing number</h2>
+            <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</p>
+            <p>123456790</p>
+            <table>
+                <tr>
+
+                    <td><input class="btn-primary" type="button" name="one" value="1" onclick="calculator.display.value += '1'"></td>
+                    <td><input class="btn-primary" type="button" name="two" value="2" onclick="calculator.display.value += '2'"></td>
+                    <td><input class="btn-primary" type="button" name="three" value="3" onclick="calculator.display.value += '3'"></td>
+                    <td><input class="btn-primary" type="button" name="four" value="4" onclick="calculator.display.value += '4'"></td>
+                </tr>
+                <tr>
+                    <td><input class="btn-primary" type="button" name="five" value="5" onclick="calculator.display.value += '5'"></td>
+                    <td><input class="btn-primary" type="button" name="six" value="6" onclick="calculator.display.value += '6'"></td>
+                    <td><input class="btn-primary" type="button" name="seven" value="7" onclick="calculator.display.value += '7'"></td>
+                    <td><input class="btn-primary" type="button" name="eight" value="8" onclick="calculator.display.value += '8'"></td>
+                </tr>
+                <tr>
+                    <td><input class="btn-primary" type="button" name="back" value="⌫" onclick="calculator.display.value = ''"></td>
+                    <td><input class="btn-primary" type="button" name="nign" value="9" onclick="calculator.display.value += '9'"></td>
+                    <td><input class="btn-primary" type="button" name="zero" value="0" onclick="calculator.display.value += '0'"></td>
+                    <td><input class="btn-primary" type="button" name="accept" value="OK" onclick="calculator.display.value += 'OK'"></td>
+                </tr>
+                <tr>
+
+                </tr>
+            </table>
+            <p>ABCDEFGHIJKLMNOPQRSTUVWXYZ</p>
+            <p>abcdefghijklmnopqrstuvwxyz</p>
+            <hr>
+        </div>
+        <div class="Atma">
+            <h1>Compute the sum - Atma</h1>
+            <h2>Find the missing number</h2>
+            <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</p>
+            <p>123456790</p>
+            <table>
+                <tr>
+
+                    <td><input class="btn-primary" type="button" name="one" value="1" onclick="calculator.display.value += '1'"></td>
+                    <td><input class="btn-primary" type="button" name="two" value="2" onclick="calculator.display.value += '2'"></td>
+                    <td><input class="btn-primary" type="button" name="three" value="3" onclick="calculator.display.value += '3'"></td>
+                    <td><input class="btn-primary" type="button" name="four" value="4" onclick="calculator.display.value += '4'"></td>
+                </tr>
+                <tr>
+                    <td><input class="btn-primary" type="button" name="five" value="5" onclick="calculator.display.value += '5'"></td>
+                    <td><input class="btn-primary" type="button" name="six" value="6" onclick="calculator.display.value += '6'"></td>
+                    <td><input class="btn-primary" type="button" name="seven" value="7" onclick="calculator.display.value += '7'"></td>
+                    <td><input class="btn-primary" type="button" name="eight" value="8" onclick="calculator.display.value += '8'"></td>
+                </tr>
+                <tr>
+                    <td><input class="btn-primary" type="button" name="back" value="⌫" onclick="calculator.display.value = ''"></td>
+                    <td><input class="btn-primary" type="button" name="nign" value="9" onclick="calculator.display.value += '9'"></td>
+                    <td><input class="btn-primary" type="button" name="zero" value="0" onclick="calculator.display.value += '0'"></td>
+                    <td><input class="btn-primary" type="button" name="accept" value="OK" onclick="calculator.display.value += 'OK'"></td>
+                </tr>
+                <tr>
+
+                </tr>
+            </table>
+            <p>ABCDEFGHIJKLMNOPQRSTUVWXYZ</p>
+            <p>abcdefghijklmnopqrstuvwxyz</p>
+            <hr>
+        </div>
+        <div class="Snippet">
+            <h1>Compute the sum - Snippet</h1>
+            <h2>Find the missing number</h2>
+            <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</p>
+            <p>123456790</p>
+            <table>
+                <tr>
+
+                    <td><input class="btn-primary" type="button" name="one" value="1" onclick="calculator.display.value += '1'"></td>
+                    <td><input class="btn-primary" type="button" name="two" value="2" onclick="calculator.display.value += '2'"></td>
+                    <td><input class="btn-primary" type="button" name="three" value="3" onclick="calculator.display.value += '3'"></td>
+                    <td><input class="btn-primary" type="button" name="four" value="4" onclick="calculator.display.value += '4'"></td>
+                </tr>
+                <tr>
+                    <td><input class="btn-primary" type="button" name="five" value="5" onclick="calculator.display.value += '5'"></td>
+                    <td><input class="btn-primary" type="button" name="six" value="6" onclick="calculator.display.value += '6'"></td>
+                    <td><input class="btn-primary" type="button" name="seven" value="7" onclick="calculator.display.value += '7'"></td>
+                    <td><input class="btn-primary" type="button" name="eight" value="8" onclick="calculator.display.value += '8'"></td>
+                </tr>
+                <tr>
+                    <td><input class="btn-primary" type="button" name="back" value="⌫" onclick="calculator.display.value = ''"></td>
+                    <td><input class="btn-primary" type="button" name="nign" value="9" onclick="calculator.display.value += '9'"></td>
+                    <td><input class="btn-primary" type="button" name="zero" value="0" onclick="calculator.display.value += '0'"></td>
+                    <td><input class="btn-primary" type="button" name="accept" value="OK" onclick="calculator.display.value += 'OK'"></td>
+                </tr>
+                <tr>
+
+                </tr>
+            </table>
+            <p>ABCDEFGHIJKLMNOPQRSTUVWXYZ</p>
+            <p>abcdefghijklmnopqrstuvwxyz</p>
+            <hr>
+        </div>
+        <div class="Modak">
+            <h1>Compute the sum - Modak</h1>
+            <h2>Find the missing number</h2>
+            <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</p>
+            <p>123456790</p>
+            <table>
+                <tr>
+
+                    <td><input class="btn-primary" type="button" name="one" value="1" onclick="calculator.display.value += '1'"></td>
+                    <td><input class="btn-primary" type="button" name="two" value="2" onclick="calculator.display.value += '2'"></td>
+                    <td><input class="btn-primary" type="button" name="three" value="3" onclick="calculator.display.value += '3'"></td>
+                    <td><input class="btn-primary" type="button" name="four" value="4" onclick="calculator.display.value += '4'"></td>
+                </tr>
+                <tr>
+                    <td><input class="btn-primary" type="button" name="five" value="5" onclick="calculator.display.value += '5'"></td>
+                    <td><input class="btn-primary" type="button" name="six" value="6" onclick="calculator.display.value += '6'"></td>
+                    <td><input class="btn-primary" type="button" name="seven" value="7" onclick="calculator.display.value += '7'"></td>
+                    <td><input class="btn-primary" type="button" name="eight" value="8" onclick="calculator.display.value += '8'"></td>
+                </tr>
+                <tr>
+                    <td><input class="btn-primary" type="button" name="back" value="⌫" onclick="calculator.display.value = ''"></td>
+                    <td><input class="btn-primary" type="button" name="nign" value="9" onclick="calculator.display.value += '9'"></td>
+                    <td><input class="btn-primary" type="button" name="zero" value="0" onclick="calculator.display.value += '0'"></td>
+                    <td><input class="btn-primary" type="button" name="accept" value="OK" onclick="calculator.display.value += 'OK'"></td>
+                </tr>
+                <tr>
+
+                </tr>
+            </table>
+            <p>ABCDEFGHIJKLMNOPQRSTUVWXYZ</p>
+            <p>abcdefghijklmnopqrstuvwxyz</p>
+            <hr>
+        </div>
+        <div class="Flavors">
+            <h1>Compute the sum - Flavors</h1>
+            <h2>Find the missing number</h2>
+            <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</p>
+            <p>123456790</p>
+            <table>
+                <tr>
+
+                    <td><input class="btn-primary" type="button" name="one" value="1" onclick="calculator.display.value += '1'"></td>
+                    <td><input class="btn-primary" type="button" name="two" value="2" onclick="calculator.display.value += '2'"></td>
+                    <td><input class="btn-primary" type="button" name="three" value="3" onclick="calculator.display.value += '3'"></td>
+                    <td><input class="btn-primary" type="button" name="four" value="4" onclick="calculator.display.value += '4'"></td>
+                </tr>
+                <tr>
+                    <td><input class="btn-primary" type="button" name="five" value="5" onclick="calculator.display.value += '5'"></td>
+                    <td><input class="btn-primary" type="button" name="six" value="6" onclick="calculator.display.value += '6'"></td>
+                    <td><input class="btn-primary" type="button" name="seven" value="7" onclick="calculator.display.value += '7'"></td>
+                    <td><input class="btn-primary" type="button" name="eight" value="8" onclick="calculator.display.value += '8'"></td>
+                </tr>
+                <tr>
+                    <td><input class="btn-primary" type="button" name="back" value="⌫" onclick="calculator.display.value = ''"></td>
+                    <td><input class="btn-primary" type="button" name="nign" value="9" onclick="calculator.display.value += '9'"></td>
+                    <td><input class="btn-primary" type="button" name="zero" value="0" onclick="calculator.display.value += '0'"></td>
+                    <td><input class="btn-primary" type="button" name="accept" value="OK" onclick="calculator.display.value += 'OK'"></td>
+                </tr>
+                <tr>
+
+                </tr>
+            </table>
+            <p>ABCDEFGHIJKLMNOPQRSTUVWXYZ</p>
+            <p>abcdefghijklmnopqrstuvwxyz</p>
+            <hr>
+        </div>
+        <div class="Londrina_Solid">
+            <h1>Compute the sum - Londrina_Solid</h1>
+            <h2>Find the missing number</h2>
+            <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</p>
+            <p>123456790</p>
+            <table>
+                <tr>
+
+                    <td><input class="btn-primary" type="button" name="one" value="1" onclick="calculator.display.value += '1'"></td>
+                    <td><input class="btn-primary" type="button" name="two" value="2" onclick="calculator.display.value += '2'"></td>
+                    <td><input class="btn-primary" type="button" name="three" value="3" onclick="calculator.display.value += '3'"></td>
+                    <td><input class="btn-primary" type="button" name="four" value="4" onclick="calculator.display.value += '4'"></td>
+                </tr>
+                <tr>
+                    <td><input class="btn-primary" type="button" name="five" value="5" onclick="calculator.display.value += '5'"></td>
+                    <td><input class="btn-primary" type="button" name="six" value="6" onclick="calculator.display.value += '6'"></td>
+                    <td><input class="btn-primary" type="button" name="seven" value="7" onclick="calculator.display.value += '7'"></td>
+                    <td><input class="btn-primary" type="button" name="eight" value="8" onclick="calculator.display.value += '8'"></td>
+                </tr>
+                <tr>
+                    <td><input class="btn-primary" type="button" name="back" value="⌫" onclick="calculator.display.value = ''"></td>
+                    <td><input class="btn-primary" type="button" name="nign" value="9" onclick="calculator.display.value += '9'"></td>
+                    <td><input class="btn-primary" type="button" name="zero" value="0" onclick="calculator.display.value += '0'"></td>
+                    <td><input class="btn-primary" type="button" name="accept" value="OK" onclick="calculator.display.value += 'OK'"></td>
+                </tr>
+                <tr>
+
+                </tr>
+            </table>
+            <p>ABCDEFGHIJKLMNOPQRSTUVWXYZ</p>
+            <p>abcdefghijklmnopqrstuvwxyz</p>
+            <hr>
+        </div>
+        <div class="Londrina_Sketch">
+            <h1>Compute the sum - Londrina_Sketch</h1>
+            <h2>Find the missing number</h2>
+            <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</p>
+            <p>123456790</p>
+            <table>
+                <tr>
+
+                    <td><input class="btn-primary" type="button" name="one" value="1" onclick="calculator.display.value += '1'"></td>
+                    <td><input class="btn-primary" type="button" name="two" value="2" onclick="calculator.display.value += '2'"></td>
+                    <td><input class="btn-primary" type="button" name="three" value="3" onclick="calculator.display.value += '3'"></td>
+                    <td><input class="btn-primary" type="button" name="four" value="4" onclick="calculator.display.value += '4'"></td>
+                </tr>
+                <tr>
+                    <td><input class="btn-primary" type="button" name="five" value="5" onclick="calculator.display.value += '5'"></td>
+                    <td><input class="btn-primary" type="button" name="six" value="6" onclick="calculator.display.value += '6'"></td>
+                    <td><input class="btn-primary" type="button" name="seven" value="7" onclick="calculator.display.value += '7'"></td>
+                    <td><input class="btn-primary" type="button" name="eight" value="8" onclick="calculator.display.value += '8'"></td>
+                </tr>
+                <tr>
+                    <td><input class="btn-primary" type="button" name="back" value="⌫" onclick="calculator.display.value = ''"></td>
+                    <td><input class="btn-primary" type="button" name="nign" value="9" onclick="calculator.display.value += '9'"></td>
+                    <td><input class="btn-primary" type="button" name="zero" value="0" onclick="calculator.display.value += '0'"></td>
+                    <td><input class="btn-primary" type="button" name="accept" value="OK" onclick="calculator.display.value += 'OK'"></td>
+                </tr>
+                <tr>
+
+                </tr>
+            </table>
+            <p>ABCDEFGHIJKLMNOPQRSTUVWXYZ</p>
+            <p>abcdefghijklmnopqrstuvwxyz</p>
+            <hr>
+        </div>
+        <div class="Londrina_Outline">
+            <h1>Compute the sum - Londrina_Outline</h1>
+            <h2>Find the missing number</h2>
+            <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</p>
+            <p>123456790</p>
+            <table>
+                <tr>
+
+                    <td><input class="btn-primary" type="button" name="one" value="1" onclick="calculator.display.value += '1'"></td>
+                    <td><input class="btn-primary" type="button" name="two" value="2" onclick="calculator.display.value += '2'"></td>
+                    <td><input class="btn-primary" type="button" name="three" value="3" onclick="calculator.display.value += '3'"></td>
+                    <td><input class="btn-primary" type="button" name="four" value="4" onclick="calculator.display.value += '4'"></td>
+                </tr>
+                <tr>
+                    <td><input class="btn-primary" type="button" name="five" value="5" onclick="calculator.display.value += '5'"></td>
+                    <td><input class="btn-primary" type="button" name="six" value="6" onclick="calculator.display.value += '6'"></td>
+                    <td><input class="btn-primary" type="button" name="seven" value="7" onclick="calculator.display.value += '7'"></td>
+                    <td><input class="btn-primary" type="button" name="eight" value="8" onclick="calculator.display.value += '8'"></td>
+                </tr>
+                <tr>
+                    <td><input class="btn-primary" type="button" name="back" value="⌫" onclick="calculator.display.value = ''"></td>
+                    <td><input class="btn-primary" type="button" name="nign" value="9" onclick="calculator.display.value += '9'"></td>
+                    <td><input class="btn-primary" type="button" name="zero" value="0" onclick="calculator.display.value += '0'"></td>
+                    <td><input class="btn-primary" type="button" name="accept" value="OK" onclick="calculator.display.value += 'OK'"></td>
+                </tr>
+                <tr>
+
+                </tr>
+            </table>
+            <p>ABCDEFGHIJKLMNOPQRSTUVWXYZ</p>
+            <p>abcdefghijklmnopqrstuvwxyz</p>
+            <hr>
+        </div>
+        <div class="Londrina_Shadow">
+            <h1>Compute the sum - Londrina_Shadow</h1>
+            <h2>Find the missing number</h2>
+            <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</p>
+            <p>123456790</p>
+            <table>
+                <tr>
+
+                    <td><input class="btn-primary" type="button" name="one" value="1" onclick="calculator.display.value += '1'"></td>
+                    <td><input class="btn-primary" type="button" name="two" value="2" onclick="calculator.display.value += '2'"></td>
+                    <td><input class="btn-primary" type="button" name="three" value="3" onclick="calculator.display.value += '3'"></td>
+                    <td><input class="btn-primary" type="button" name="four" value="4" onclick="calculator.display.value += '4'"></td>
+                </tr>
+                <tr>
+                    <td><input class="btn-primary" type="button" name="five" value="5" onclick="calculator.display.value += '5'"></td>
+                    <td><input class="btn-primary" type="button" name="six" value="6" onclick="calculator.display.value += '6'"></td>
+                    <td><input class="btn-primary" type="button" name="seven" value="7" onclick="calculator.display.value += '7'"></td>
+                    <td><input class="btn-primary" type="button" name="eight" value="8" onclick="calculator.display.value += '8'"></td>
+                </tr>
+                <tr>
+                    <td><input class="btn-primary" type="button" name="back" value="⌫" onclick="calculator.display.value = ''"></td>
+                    <td><input class="btn-primary" type="button" name="nign" value="9" onclick="calculator.display.value += '9'"></td>
+                    <td><input class="btn-primary" type="button" name="zero" value="0" onclick="calculator.display.value += '0'"></td>
+                    <td><input class="btn-primary" type="button" name="accept" value="OK" onclick="calculator.display.value += 'OK'"></td>
+                </tr>
+                <tr>
+
+                </tr>
+            </table>
+            <p>ABCDEFGHIJKLMNOPQRSTUVWXYZ</p>
+            <p>abcdefghijklmnopqrstuvwxyz</p>
+            <hr>
+        </div>
+        <div class="McLaren">
+            <h1>Compute the sum - McLaren</h1>
+            <h2>Find the missing number</h2>
+            <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</p>
+            <p>123456790</p>
+            <table>
+                <tr>
+
+                    <td><input class="btn-primary" type="button" name="one" value="1" onclick="calculator.display.value += '1'"></td>
+                    <td><input class="btn-primary" type="button" name="two" value="2" onclick="calculator.display.value += '2'"></td>
+                    <td><input class="btn-primary" type="button" name="three" value="3" onclick="calculator.display.value += '3'"></td>
+                    <td><input class="btn-primary" type="button" name="four" value="4" onclick="calculator.display.value += '4'"></td>
+                </tr>
+                <tr>
+                    <td><input class="btn-primary" type="button" name="five" value="5" onclick="calculator.display.value += '5'"></td>
+                    <td><input class="btn-primary" type="button" name="six" value="6" onclick="calculator.display.value += '6'"></td>
+                    <td><input class="btn-primary" type="button" name="seven" value="7" onclick="calculator.display.value += '7'"></td>
+                    <td><input class="btn-primary" type="button" name="eight" value="8" onclick="calculator.display.value += '8'"></td>
+                </tr>
+                <tr>
+                    <td><input class="btn-primary" type="button" name="back" value="⌫" onclick="calculator.display.value = ''"></td>
+                    <td><input class="btn-primary" type="button" name="nign" value="9" onclick="calculator.display.value += '9'"></td>
+                    <td><input class="btn-primary" type="button" name="zero" value="0" onclick="calculator.display.value += '0'"></td>
+                    <td><input class="btn-primary" type="button" name="accept" value="OK" onclick="calculator.display.value += 'OK'"></td>
+                </tr>
+                <tr>
+
+                </tr>
+            </table>
+            <p>ABCDEFGHIJKLMNOPQRSTUVWXYZ</p>
+            <p>abcdefghijklmnopqrstuvwxyz</p>
+            <hr>
+        </div>
+        <div class="Henny_Penny">
+            <h1>Compute the sum - Henny_Penny</h1>
+            <h2>Find the missing number</h2>
+            <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</p>
+            <p>123456790</p>
+            <table>
+                <tr>
+
+                    <td><input class="btn-primary" type="button" name="one" value="1" onclick="calculator.display.value += '1'"></td>
+                    <td><input class="btn-primary" type="button" name="two" value="2" onclick="calculator.display.value += '2'"></td>
+                    <td><input class="btn-primary" type="button" name="three" value="3" onclick="calculator.display.value += '3'"></td>
+                    <td><input class="btn-primary" type="button" name="four" value="4" onclick="calculator.display.value += '4'"></td>
+                </tr>
+                <tr>
+                    <td><input class="btn-primary" type="button" name="five" value="5" onclick="calculator.display.value += '5'"></td>
+                    <td><input class="btn-primary" type="button" name="six" value="6" onclick="calculator.display.value += '6'"></td>
+                    <td><input class="btn-primary" type="button" name="seven" value="7" onclick="calculator.display.value += '7'"></td>
+                    <td><input class="btn-primary" type="button" name="eight" value="8" onclick="calculator.display.value += '8'"></td>
+                </tr>
+                <tr>
+                    <td><input class="btn-primary" type="button" name="back" value="⌫" onclick="calculator.display.value = ''"></td>
+                    <td><input class="btn-primary" type="button" name="nign" value="9" onclick="calculator.display.value += '9'"></td>
+                    <td><input class="btn-primary" type="button" name="zero" value="0" onclick="calculator.display.value += '0'"></td>
+                    <td><input class="btn-primary" type="button" name="accept" value="OK" onclick="calculator.display.value += 'OK'"></td>
+                </tr>
+                <tr>
+
+                </tr>
+            </table>
+            <p>ABCDEFGHIJKLMNOPQRSTUVWXYZ</p>
+            <p>abcdefghijklmnopqrstuvwxyz</p>
+            <hr>
+        </div>
+        <div class="Fresca">
+            <h1>Compute the sum - Fresca</h1>
+            <h2>Find the missing number</h2>
+            <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</p>
+            <p>123456790</p>
+            <table>
+                <tr>
+
+                    <td><input class="btn-primary" type="button" name="one" value="1" onclick="calculator.display.value += '1'"></td>
+                    <td><input class="btn-primary" type="button" name="two" value="2" onclick="calculator.display.value += '2'"></td>
+                    <td><input class="btn-primary" type="button" name="three" value="3" onclick="calculator.display.value += '3'"></td>
+                    <td><input class="btn-primary" type="button" name="four" value="4" onclick="calculator.display.value += '4'"></td>
+                </tr>
+                <tr>
+                    <td><input class="btn-primary" type="button" name="five" value="5" onclick="calculator.display.value += '5'"></td>
+                    <td><input class="btn-primary" type="button" name="six" value="6" onclick="calculator.display.value += '6'"></td>
+                    <td><input class="btn-primary" type="button" name="seven" value="7" onclick="calculator.display.value += '7'"></td>
+                    <td><input class="btn-primary" type="button" name="eight" value="8" onclick="calculator.display.value += '8'"></td>
+                </tr>
+                <tr>
+                    <td><input class="btn-primary" type="button" name="back" value="⌫" onclick="calculator.display.value = ''"></td>
+                    <td><input class="btn-primary" type="button" name="nign" value="9" onclick="calculator.display.value += '9'"></td>
+                    <td><input class="btn-primary" type="button" name="zero" value="0" onclick="calculator.display.value += '0'"></td>
+                    <td><input class="btn-primary" type="button" name="accept" value="OK" onclick="calculator.display.value += 'OK'"></td>
+                </tr>
+                <tr>
+
+                </tr>
+            </table>
+            <p>ABCDEFGHIJKLMNOPQRSTUVWXYZ</p>
+            <p>abcdefghijklmnopqrstuvwxyz</p>
+            <hr>
+        </div>
+        <div class="Mouse_Memoirs">
+            <h1>Compute the sum - Mouse_Memoirs</h1>
+            <h2>Find the missing number</h2>
+            <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</p>
+            <p>123456790</p>
+            <table>
+                <tr>
+
+                    <td><input class="btn-primary" type="button" name="one" value="1" onclick="calculator.display.value += '1'"></td>
+                    <td><input class="btn-primary" type="button" name="two" value="2" onclick="calculator.display.value += '2'"></td>
+                    <td><input class="btn-primary" type="button" name="three" value="3" onclick="calculator.display.value += '3'"></td>
+                    <td><input class="btn-primary" type="button" name="four" value="4" onclick="calculator.display.value += '4'"></td>
+                </tr>
+                <tr>
+                    <td><input class="btn-primary" type="button" name="five" value="5" onclick="calculator.display.value += '5'"></td>
+                    <td><input class="btn-primary" type="button" name="six" value="6" onclick="calculator.display.value += '6'"></td>
+                    <td><input class="btn-primary" type="button" name="seven" value="7" onclick="calculator.display.value += '7'"></td>
+                    <td><input class="btn-primary" type="button" name="eight" value="8" onclick="calculator.display.value += '8'"></td>
+                </tr>
+                <tr>
+                    <td><input class="btn-primary" type="button" name="back" value="⌫" onclick="calculator.display.value = ''"></td>
+                    <td><input class="btn-primary" type="button" name="nign" value="9" onclick="calculator.display.value += '9'"></td>
+                    <td><input class="btn-primary" type="button" name="zero" value="0" onclick="calculator.display.value += '0'"></td>
+                    <td><input class="btn-primary" type="button" name="accept" value="OK" onclick="calculator.display.value += 'OK'"></td>
+                </tr>
+                <tr>
+
+                </tr>
+            </table>
+            <p>ABCDEFGHIJKLMNOPQRSTUVWXYZ</p>
+            <p>abcdefghijklmnopqrstuvwxyz</p>
+            <hr>
+        </div>
+        <div class="Butterfly_Kids">
+            <h1>Compute the sum - Butterfly_Kids</h1>
+            <h2>Find the missing number</h2>
+            <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</p>
+            <p>123456790</p>
+            <table>
+                <tr>
+
+                    <td><input class="btn-primary" type="button" name="one" value="1" onclick="calculator.display.value += '1'"></td>
+                    <td><input class="btn-primary" type="button" name="two" value="2" onclick="calculator.display.value += '2'"></td>
+                    <td><input class="btn-primary" type="button" name="three" value="3" onclick="calculator.display.value += '3'"></td>
+                    <td><input class="btn-primary" type="button" name="four" value="4" onclick="calculator.display.value += '4'"></td>
+                </tr>
+                <tr>
+                    <td><input class="btn-primary" type="button" name="five" value="5" onclick="calculator.display.value += '5'"></td>
+                    <td><input class="btn-primary" type="button" name="six" value="6" onclick="calculator.display.value += '6'"></td>
+                    <td><input class="btn-primary" type="button" name="seven" value="7" onclick="calculator.display.value += '7'"></td>
+                    <td><input class="btn-primary" type="button" name="eight" value="8" onclick="calculator.display.value += '8'"></td>
+                </tr>
+                <tr>
+                    <td><input class="btn-primary" type="button" name="back" value="⌫" onclick="calculator.display.value = ''"></td>
+                    <td><input class="btn-primary" type="button" name="nign" value="9" onclick="calculator.display.value += '9'"></td>
+                    <td><input class="btn-primary" type="button" name="zero" value="0" onclick="calculator.display.value += '0'"></td>
+                    <td><input class="btn-primary" type="button" name="accept" value="OK" onclick="calculator.display.value += 'OK'"></td>
+                </tr>
+                <tr>
+
+                </tr>
+            </table>
+            <p>ABCDEFGHIJKLMNOPQRSTUVWXYZ</p>
+            <p>abcdefghijklmnopqrstuvwxyz</p>
+            <hr>
+        </div>
+        <div class="Cabin_Sketch">
+            <h1>Compute the sum - Cabin_Sketch</h1>
+            <h2>Find the missing number</h2>
+            <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</p>
+            <p>123456790</p>
+            <table>
+                <tr>
+
+                    <td><input class="btn-primary" type="button" name="one" value="1" onclick="calculator.display.value += '1'"></td>
+                    <td><input class="btn-primary" type="button" name="two" value="2" onclick="calculator.display.value += '2'"></td>
+                    <td><input class="btn-primary" type="button" name="three" value="3" onclick="calculator.display.value += '3'"></td>
+                    <td><input class="btn-primary" type="button" name="four" value="4" onclick="calculator.display.value += '4'"></td>
+                </tr>
+                <tr>
+                    <td><input class="btn-primary" type="button" name="five" value="5" onclick="calculator.display.value += '5'"></td>
+                    <td><input class="btn-primary" type="button" name="six" value="6" onclick="calculator.display.value += '6'"></td>
+                    <td><input class="btn-primary" type="button" name="seven" value="7" onclick="calculator.display.value += '7'"></td>
+                    <td><input class="btn-primary" type="button" name="eight" value="8" onclick="calculator.display.value += '8'"></td>
+                </tr>
+                <tr>
+                    <td><input class="btn-primary" type="button" name="back" value="⌫" onclick="calculator.display.value = ''"></td>
+                    <td><input class="btn-primary" type="button" name="nign" value="9" onclick="calculator.display.value += '9'"></td>
+                    <td><input class="btn-primary" type="button" name="zero" value="0" onclick="calculator.display.value += '0'"></td>
+                    <td><input class="btn-primary" type="button" name="accept" value="OK" onclick="calculator.display.value += 'OK'"></td>
+                </tr>
+                <tr>
+
+                </tr>
+            </table>
+            <p>ABCDEFGHIJKLMNOPQRSTUVWXYZ</p>
+            <p>abcdefghijklmnopqrstuvwxyz</p>
+            <hr>
+        </div>
+        <div class="Cabin">
+            <h1>Compute the sum - Cabin</h1>
+            <h2>Find the missing number</h2>
+            <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</p>
+            <p>123456790</p>
+            <table>
+                <tr>
+
+                    <td><input class="btn-primary" type="button" name="one" value="1" onclick="calculator.display.value += '1'"></td>
+                    <td><input class="btn-primary" type="button" name="two" value="2" onclick="calculator.display.value += '2'"></td>
+                    <td><input class="btn-primary" type="button" name="three" value="3" onclick="calculator.display.value += '3'"></td>
+                    <td><input class="btn-primary" type="button" name="four" value="4" onclick="calculator.display.value += '4'"></td>
+                </tr>
+                <tr>
+                    <td><input class="btn-primary" type="button" name="five" value="5" onclick="calculator.display.value += '5'"></td>
+                    <td><input class="btn-primary" type="button" name="six" value="6" onclick="calculator.display.value += '6'"></td>
+                    <td><input class="btn-primary" type="button" name="seven" value="7" onclick="calculator.display.value += '7'"></td>
+                    <td><input class="btn-primary" type="button" name="eight" value="8" onclick="calculator.display.value += '8'"></td>
+                </tr>
+                <tr>
+                    <td><input class="btn-primary" type="button" name="back" value="⌫" onclick="calculator.display.value = ''"></td>
+                    <td><input class="btn-primary" type="button" name="nign" value="9" onclick="calculator.display.value += '9'"></td>
+                    <td><input class="btn-primary" type="button" name="zero" value="0" onclick="calculator.display.value += '0'"></td>
+                    <td><input class="btn-primary" type="button" name="accept" value="OK" onclick="calculator.display.value += 'OK'"></td>
+                </tr>
+                <tr>
+
+                </tr>
+            </table>
+            <p>ABCDEFGHIJKLMNOPQRSTUVWXYZ</p>
+            <p>abcdefghijklmnopqrstuvwxyz</p>
+            <hr>
+        </div>
+        <div class="Mystery_Quest">
+            <h1>Compute the sum - Mystery_Quest</h1>
+            <h2>Find the missing number</h2>
+            <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</p>
+            <p>123456790</p>
+            <table>
+                <tr>
+
+                    <td><input class="btn-primary" type="button" name="one" value="1" onclick="calculator.display.value += '1'"></td>
+                    <td><input class="btn-primary" type="button" name="two" value="2" onclick="calculator.display.value += '2'"></td>
+                    <td><input class="btn-primary" type="button" name="three" value="3" onclick="calculator.display.value += '3'"></td>
+                    <td><input class="btn-primary" type="button" name="four" value="4" onclick="calculator.display.value += '4'"></td>
+                </tr>
+                <tr>
+                    <td><input class="btn-primary" type="button" name="five" value="5" onclick="calculator.display.value += '5'"></td>
+                    <td><input class="btn-primary" type="button" name="six" value="6" onclick="calculator.display.value += '6'"></td>
+                    <td><input class="btn-primary" type="button" name="seven" value="7" onclick="calculator.display.value += '7'"></td>
+                    <td><input class="btn-primary" type="button" name="eight" value="8" onclick="calculator.display.value += '8'"></td>
+                </tr>
+                <tr>
+                    <td><input class="btn-primary" type="button" name="back" value="⌫" onclick="calculator.display.value = ''"></td>
+                    <td><input class="btn-primary" type="button" name="nign" value="9" onclick="calculator.display.value += '9'"></td>
+                    <td><input class="btn-primary" type="button" name="zero" value="0" onclick="calculator.display.value += '0'"></td>
+                    <td><input class="btn-primary" type="button" name="accept" value="OK" onclick="calculator.display.value += 'OK'"></td>
+                </tr>
+                <tr>
+
+                </tr>
+            </table>
+            <p>ABCDEFGHIJKLMNOPQRSTUVWXYZ</p>
+            <p>abcdefghijklmnopqrstuvwxyz</p>
+            <hr>
+        </div>
+        <div class="Pompiere">
+            <h1>Compute the sum - Pompiere</h1>
+            <h2>Find the missing number</h2>
+            <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</p>
+            <p>123456790</p>
+            <table>
+                <tr>
+
+                    <td><input class="btn-primary" type="button" name="one" value="1" onclick="calculator.display.value += '1'"></td>
+                    <td><input class="btn-primary" type="button" name="two" value="2" onclick="calculator.display.value += '2'"></td>
+                    <td><input class="btn-primary" type="button" name="three" value="3" onclick="calculator.display.value += '3'"></td>
+                    <td><input class="btn-primary" type="button" name="four" value="4" onclick="calculator.display.value += '4'"></td>
+                </tr>
+                <tr>
+                    <td><input class="btn-primary" type="button" name="five" value="5" onclick="calculator.display.value += '5'"></td>
+                    <td><input class="btn-primary" type="button" name="six" value="6" onclick="calculator.display.value += '6'"></td>
+                    <td><input class="btn-primary" type="button" name="seven" value="7" onclick="calculator.display.value += '7'"></td>
+                    <td><input class="btn-primary" type="button" name="eight" value="8" onclick="calculator.display.value += '8'"></td>
+                </tr>
+                <tr>
+                    <td><input class="btn-primary" type="button" name="back" value="⌫" onclick="calculator.display.value = ''"></td>
+                    <td><input class="btn-primary" type="button" name="nign" value="9" onclick="calculator.display.value += '9'"></td>
+                    <td><input class="btn-primary" type="button" name="zero" value="0" onclick="calculator.display.value += '0'"></td>
+                    <td><input class="btn-primary" type="button" name="accept" value="OK" onclick="calculator.display.value += 'OK'"></td>
+                </tr>
+                <tr>
+
+                </tr>
+            </table>
+            <p>ABCDEFGHIJKLMNOPQRSTUVWXYZ</p>
+            <p>abcdefghijklmnopqrstuvwxyz</p>
+            <hr>
+        </div>
+        <div class="Chewy">
+            <h1>Compute the sum - Chewy</h1>
+            <h2>Find the missing number</h2>
+            <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</p>
+            <p>123456790</p>
+            <table>
+                <tr>
+
+                    <td><input class="btn-primary" type="button" name="one" value="1" onclick="calculator.display.value += '1'"></td>
+                    <td><input class="btn-primary" type="button" name="two" value="2" onclick="calculator.display.value += '2'"></td>
+                    <td><input class="btn-primary" type="button" name="three" value="3" onclick="calculator.display.value += '3'"></td>
+                    <td><input class="btn-primary" type="button" name="four" value="4" onclick="calculator.display.value += '4'"></td>
+                </tr>
+                <tr>
+                    <td><input class="btn-primary" type="button" name="five" value="5" onclick="calculator.display.value += '5'"></td>
+                    <td><input class="btn-primary" type="button" name="six" value="6" onclick="calculator.display.value += '6'"></td>
+                    <td><input class="btn-primary" type="button" name="seven" value="7" onclick="calculator.display.value += '7'"></td>
+                    <td><input class="btn-primary" type="button" name="eight" value="8" onclick="calculator.display.value += '8'"></td>
+                </tr>
+                <tr>
+                    <td><input class="btn-primary" type="button" name="back" value="⌫" onclick="calculator.display.value = ''"></td>
+                    <td><input class="btn-primary" type="button" name="nign" value="9" onclick="calculator.display.value += '9'"></td>
+                    <td><input class="btn-primary" type="button" name="zero" value="0" onclick="calculator.display.value += '0'"></td>
+                    <td><input class="btn-primary" type="button" name="accept" value="OK" onclick="calculator.display.value += 'OK'"></td>
+                </tr>
+                <tr>
+
+                </tr>
+            </table>
+            <p>ABCDEFGHIJKLMNOPQRSTUVWXYZ</p>
+            <p>abcdefghijklmnopqrstuvwxyz</p>
+            <hr>
+        </div>
+        <div class="Love_Ya_Like_A_Sister">
+            <h1>Compute the sum - Love_Ya_Like_A_Sister</h1>
+            <h2>Find the missing number</h2>
+            <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</p>
+            <p>123456790</p>
+            <table>
+                <tr>
+
+                    <td><input class="btn-primary" type="button" name="one" value="1" onclick="calculator.display.value += '1'"></td>
+                    <td><input class="btn-primary" type="button" name="two" value="2" onclick="calculator.display.value += '2'"></td>
+                    <td><input class="btn-primary" type="button" name="three" value="3" onclick="calculator.display.value += '3'"></td>
+                    <td><input class="btn-primary" type="button" name="four" value="4" onclick="calculator.display.value += '4'"></td>
+                </tr>
+                <tr>
+                    <td><input class="btn-primary" type="button" name="five" value="5" onclick="calculator.display.value += '5'"></td>
+                    <td><input class="btn-primary" type="button" name="six" value="6" onclick="calculator.display.value += '6'"></td>
+                    <td><input class="btn-primary" type="button" name="seven" value="7" onclick="calculator.display.value += '7'"></td>
+                    <td><input class="btn-primary" type="button" name="eight" value="8" onclick="calculator.display.value += '8'"></td>
+                </tr>
+                <tr>
+                    <td><input class="btn-primary" type="button" name="back" value="⌫" onclick="calculator.display.value = ''"></td>
+                    <td><input class="btn-primary" type="button" name="nign" value="9" onclick="calculator.display.value += '9'"></td>
+                    <td><input class="btn-primary" type="button" name="zero" value="0" onclick="calculator.display.value += '0'"></td>
+                    <td><input class="btn-primary" type="button" name="accept" value="OK" onclick="calculator.display.value += 'OK'"></td>
+                </tr>
+                <tr>
+
+                </tr>
+            </table>
+            <p>ABCDEFGHIJKLMNOPQRSTUVWXYZ</p>
+            <p>abcdefghijklmnopqrstuvwxyz</p>
+            <hr>
+        </div>
+        <div class="Coming_Soon">
+            <h1>Compute the sum - Coming_Soon</h1>
+            <h2>Find the missing number</h2>
+            <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</p>
+            <p>123456790</p>
+            <table>
+                <tr>
+
+                    <td><input class="btn-primary" type="button" name="one" value="1" onclick="calculator.display.value += '1'"></td>
+                    <td><input class="btn-primary" type="button" name="two" value="2" onclick="calculator.display.value += '2'"></td>
+                    <td><input class="btn-primary" type="button" name="three" value="3" onclick="calculator.display.value += '3'"></td>
+                    <td><input class="btn-primary" type="button" name="four" value="4" onclick="calculator.display.value += '4'"></td>
+                </tr>
+                <tr>
+                    <td><input class="btn-primary" type="button" name="five" value="5" onclick="calculator.display.value += '5'"></td>
+                    <td><input class="btn-primary" type="button" name="six" value="6" onclick="calculator.display.value += '6'"></td>
+                    <td><input class="btn-primary" type="button" name="seven" value="7" onclick="calculator.display.value += '7'"></td>
+                    <td><input class="btn-primary" type="button" name="eight" value="8" onclick="calculator.display.value += '8'"></td>
+                </tr>
+                <tr>
+                    <td><input class="btn-primary" type="button" name="back" value="⌫" onclick="calculator.display.value = ''"></td>
+                    <td><input class="btn-primary" type="button" name="nign" value="9" onclick="calculator.display.value += '9'"></td>
+                    <td><input class="btn-primary" type="button" name="zero" value="0" onclick="calculator.display.value += '0'"></td>
+                    <td><input class="btn-primary" type="button" name="accept" value="OK" onclick="calculator.display.value += 'OK'"></td>
+                </tr>
+                <tr>
+
+                </tr>
+            </table>
+            <p>ABCDEFGHIJKLMNOPQRSTUVWXYZ</p>
+            <p>abcdefghijklmnopqrstuvwxyz</p>
+            <hr>
+        </div>
+        <div class="Luckiest_Guy">
+            <h1>Compute the sum - Luckiest_Guy</h1>
+            <h2>Find the missing number</h2>
+            <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</p>
+            <p>123456790</p>
+            <table>
+                <tr>
+
+                    <td><input class="btn-primary" type="button" name="one" value="1" onclick="calculator.display.value += '1'"></td>
+                    <td><input class="btn-primary" type="button" name="two" value="2" onclick="calculator.display.value += '2'"></td>
+                    <td><input class="btn-primary" type="button" name="three" value="3" onclick="calculator.display.value += '3'"></td>
+                    <td><input class="btn-primary" type="button" name="four" value="4" onclick="calculator.display.value += '4'"></td>
+                </tr>
+                <tr>
+                    <td><input class="btn-primary" type="button" name="five" value="5" onclick="calculator.display.value += '5'"></td>
+                    <td><input class="btn-primary" type="button" name="six" value="6" onclick="calculator.display.value += '6'"></td>
+                    <td><input class="btn-primary" type="button" name="seven" value="7" onclick="calculator.display.value += '7'"></td>
+                    <td><input class="btn-primary" type="button" name="eight" value="8" onclick="calculator.display.value += '8'"></td>
+                </tr>
+                <tr>
+                    <td><input class="btn-primary" type="button" name="back" value="⌫" onclick="calculator.display.value = ''"></td>
+                    <td><input class="btn-primary" type="button" name="nign" value="9" onclick="calculator.display.value += '9'"></td>
+                    <td><input class="btn-primary" type="button" name="zero" value="0" onclick="calculator.display.value += '0'"></td>
+                    <td><input class="btn-primary" type="button" name="accept" value="OK" onclick="calculator.display.value += 'OK'"></td>
+                </tr>
+                <tr>
+
+                </tr>
+            </table>
+            <p>ABCDEFGHIJKLMNOPQRSTUVWXYZ</p>
+            <p>abcdefghijklmnopqrstuvwxyz</p>
+            <hr>
+        </div>
+        <div class="Boogaloo">
+            <h1>Compute the sum - Boogaloo</h1>
+            <h2>Find the missing number</h2>
+            <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</p>
+            <p>123456790</p>
+            <table>
+                <tr>
+
+                    <td><input class="btn-primary" type="button" name="one" value="1" onclick="calculator.display.value += '1'"></td>
+                    <td><input class="btn-primary" type="button" name="two" value="2" onclick="calculator.display.value += '2'"></td>
+                    <td><input class="btn-primary" type="button" name="three" value="3" onclick="calculator.display.value += '3'"></td>
+                    <td><input class="btn-primary" type="button" name="four" value="4" onclick="calculator.display.value += '4'"></td>
+                </tr>
+                <tr>
+                    <td><input class="btn-primary" type="button" name="five" value="5" onclick="calculator.display.value += '5'"></td>
+                    <td><input class="btn-primary" type="button" name="six" value="6" onclick="calculator.display.value += '6'"></td>
+                    <td><input class="btn-primary" type="button" name="seven" value="7" onclick="calculator.display.value += '7'"></td>
+                    <td><input class="btn-primary" type="button" name="eight" value="8" onclick="calculator.display.value += '8'"></td>
+                </tr>
+                <tr>
+                    <td><input class="btn-primary" type="button" name="back" value="⌫" onclick="calculator.display.value = ''"></td>
+                    <td><input class="btn-primary" type="button" name="nign" value="9" onclick="calculator.display.value += '9'"></td>
+                    <td><input class="btn-primary" type="button" name="zero" value="0" onclick="calculator.display.value += '0'"></td>
+                    <td><input class="btn-primary" type="button" name="accept" value="OK" onclick="calculator.display.value += 'OK'"></td>
+                </tr>
+                <tr>
+
+                </tr>
+            </table>
+            <p>ABCDEFGHIJKLMNOPQRSTUVWXYZ</p>
+            <p>abcdefghijklmnopqrstuvwxyz</p>
+            <hr>
+        </div>
+        <div class="Delius_Swash_Caps">
+            <h1>Compute the sum - Delius_Swash_Caps</h1>
+            <h2>Find the missing number</h2>
+            <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</p>
+            <p>123456790</p>
+            <table>
+                <tr>
+
+                    <td><input class="btn-primary" type="button" name="one" value="1" onclick="calculator.display.value += '1'"></td>
+                    <td><input class="btn-primary" type="button" name="two" value="2" onclick="calculator.display.value += '2'"></td>
+                    <td><input class="btn-primary" type="button" name="three" value="3" onclick="calculator.display.value += '3'"></td>
+                    <td><input class="btn-primary" type="button" name="four" value="4" onclick="calculator.display.value += '4'"></td>
+                </tr>
+                <tr>
+                    <td><input class="btn-primary" type="button" name="five" value="5" onclick="calculator.display.value += '5'"></td>
+                    <td><input class="btn-primary" type="button" name="six" value="6" onclick="calculator.display.value += '6'"></td>
+                    <td><input class="btn-primary" type="button" name="seven" value="7" onclick="calculator.display.value += '7'"></td>
+                    <td><input class="btn-primary" type="button" name="eight" value="8" onclick="calculator.display.value += '8'"></td>
+                </tr>
+                <tr>
+                    <td><input class="btn-primary" type="button" name="back" value="⌫" onclick="calculator.display.value = ''"></td>
+                    <td><input class="btn-primary" type="button" name="nign" value="9" onclick="calculator.display.value += '9'"></td>
+                    <td><input class="btn-primary" type="button" name="zero" value="0" onclick="calculator.display.value += '0'"></td>
+                    <td><input class="btn-primary" type="button" name="accept" value="OK" onclick="calculator.display.value += 'OK'"></td>
+                </tr>
+                <tr>
+
+                </tr>
+            </table>
+            <p>ABCDEFGHIJKLMNOPQRSTUVWXYZ</p>
+            <p>abcdefghijklmnopqrstuvwxyz</p>
+            <hr>
+        </div>
+        <div class="Bubblegum_Sans">
+            <h1>Compute the sum - Bubblegum_Sans</h1>
+            <h2>Find the missing number</h2>
+            <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</p>
+            <p>123456790</p>
+            <table>
+                <tr>
+
+                    <td><input class="btn-primary" type="button" name="one" value="1" onclick="calculator.display.value += '1'"></td>
+                    <td><input class="btn-primary" type="button" name="two" value="2" onclick="calculator.display.value += '2'"></td>
+                    <td><input class="btn-primary" type="button" name="three" value="3" onclick="calculator.display.value += '3'"></td>
+                    <td><input class="btn-primary" type="button" name="four" value="4" onclick="calculator.display.value += '4'"></td>
+                </tr>
+                <tr>
+                    <td><input class="btn-primary" type="button" name="five" value="5" onclick="calculator.display.value += '5'"></td>
+                    <td><input class="btn-primary" type="button" name="six" value="6" onclick="calculator.display.value += '6'"></td>
+                    <td><input class="btn-primary" type="button" name="seven" value="7" onclick="calculator.display.value += '7'"></td>
+                    <td><input class="btn-primary" type="button" name="eight" value="8" onclick="calculator.display.value += '8'"></td>
+                </tr>
+                <tr>
+                    <td><input class="btn-primary" type="button" name="back" value="⌫" onclick="calculator.display.value = ''"></td>
+                    <td><input class="btn-primary" type="button" name="nign" value="9" onclick="calculator.display.value += '9'"></td>
+                    <td><input class="btn-primary" type="button" name="zero" value="0" onclick="calculator.display.value += '0'"></td>
+                    <td><input class="btn-primary" type="button" name="accept" value="OK" onclick="calculator.display.value += 'OK'"></td>
+                </tr>
+                <tr>
+
+                </tr>
+            </table>
+            <p>ABCDEFGHIJKLMNOPQRSTUVWXYZ</p>
+            <p>abcdefghijklmnopqrstuvwxyz</p>
+            <hr>
+        </div>
+    </div>
+
+    <script>
+    function back() {
+    var value = document.getElementById("d").value;
+        document.getElementById("d").value = value.substr(0, value.length - 1);
+    }
+    </script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+</body>
+
+</html>
